@@ -58,9 +58,9 @@ userSchema.virtual("password")
           return this._password
       });
 
-    // PASSWORD HASHING  
-userSchema.methods = {
 
+// PASSWORD HASHING  
+userSchema.methods = {
     authenticate: function(mainpassword){
         return this.securePassword(mainpassword) === this.encry_password;
     },
