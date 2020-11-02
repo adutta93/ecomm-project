@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const { check, validationResult } = require('express-validator');
 const {signup, login, signout} = require('../controllers/authController');
+const {isSignedIn} = require('../middleware/auth')
 
-// , , isSignedIn
 router.post('/signup', [
     check("firstName")
     .isLength({ min: 2 }).withMessage('Firstname must have at least 3 chars long'),
