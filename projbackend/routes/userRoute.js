@@ -3,7 +3,6 @@ const router = express.Router();
 
 const {
   getUserById,
-  getAllUsers,
   getUser,
   updateUser,
   userPurchaseList,
@@ -16,7 +15,7 @@ const {
 
 router.param("userId", getUserById);
 
-router.get("/users", getAllUsers);
+
 router.get("/user/:userId", isSignedIn, isAuthenticated, getUser);
 router.put("/user/:userId", isSignedIn, isAuthenticated, updateUser);
 router.get(

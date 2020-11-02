@@ -14,22 +14,6 @@ exports.getUserById = (req, res, next, id) => {
   });
 };
 
-// to all users
-exports.getAllUsers = async (req, res) => {
-  try {
-    const users = await User.find();
-    res.status(200).json({
-      status: "Success",
-      results: users.length,
-      users,
-    });
-  } catch (err) {
-    res.status(400).json({
-      status: "failed",
-      message: err,
-    });
-  }
-};
 
 exports.getUser = (req, res) => {
   req.profile.salt = undefined;
@@ -55,7 +39,10 @@ exports.updateUser = (req, res) => {
       user.encry_password = undefined;
       user.createdAt = undefined;
       user.updatedAt = undefined;
-      res.json(user);
+      res.json({
+        msg: "User updated successfully",
+        user
+      });
     }
   );
 };
