@@ -2,7 +2,6 @@ const User = require("../models/userModel");
 const { check, validationResult } = require("express-validator");
 const jwt = require("jsonwebtoken");
 
-
 // SIGNUP
 exports.signup = (req, res) => {
   const errors = validationResult(req);
@@ -83,4 +82,3 @@ exports.signout = (req, res) => {
     message: "You signed out successfully",
   });
 };
-

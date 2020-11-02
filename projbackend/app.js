@@ -39,7 +39,7 @@ mongoose
 
 // My routes
 const authRoute = require('./routes/authRoute');
-// const userRoute = require('./routes/userRoute');
+const userRoute = require('./routes/userRoute');
 // const categoryRoute = require('./routes/categoryRoute');
 // const productRoute = require('./routes/productRoute');
 // const orderRoute = require('./routes/orderRoute');
@@ -47,7 +47,7 @@ const authRoute = require('./routes/authRoute');
 
 // // Routers
 app.use('/api/',authRoute);
-// app.use('/api/', userRoute);
+app.use('/api/', userRoute);
 // app.use('/api/', categoryRoute);
 // app.use('/api/', productRoute);
 // app.use('/api/', orderRoute);
