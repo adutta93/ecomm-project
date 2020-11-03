@@ -105,7 +105,7 @@ export const FooterLink = styled.div`
   cursor: pointer;
   &:hover {
     color: #0467fb;
-    transition: 0.3s ease-out;
+    
   }
 `;
 

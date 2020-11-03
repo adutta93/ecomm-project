@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../../index.globalStyle";
-import { FaMagento } from "react-icons/fa";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
@@ -37,7 +37,7 @@ export const Logo = styled(Link)`
   cursor: pointer;
 `;
 
-export const Icon = styled(FaMagento)`
+export const Icon = styled(AiOutlineShoppingCart)`
   margin-right: 0.5rem;
 `;
 

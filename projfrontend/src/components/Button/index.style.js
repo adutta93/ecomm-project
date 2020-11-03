@@ -33,10 +33,9 @@ export const Btn = styled.button`
     smallMargin ? ".1rem" : largeMargin ? "5rem" : ""};
   cursor: pointer;
   &:hover {
-    border: 2px solid white;
     color: #fff;
     background: ${({ deleteBtn }) => (deleteBtn ? "#E44236" : "#00c792")};
-    /* transition: all 0.3s ease-out; */
+    
   }
   @media screen and (max-width: 768px) {
     margin-left: -0.1rem;

@@ -79,10 +79,10 @@ const Footer = () => {
         <SocialMediaWrap>
           <SocialLogo to="/">
             <SocialIcon />
-            Devium
+            Cartman
           </SocialLogo>
           <WebsiteRights>
-            © 2020 Devium | Made by
+            © 2020 Cartman | Made by
             <a
               target="_blank"
               rel="noopener noreferrer"

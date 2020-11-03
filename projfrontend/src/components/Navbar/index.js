@@ -89,7 +89,7 @@ const Navbar = () => {
       <NavbarContainer>
         <Logo to="/">
           <Icon />
-          Devium
+          Cartman
         </Logo>
 
         <Fragment>{isAuthenticated ? authUserLink : guestUserLink}</Fragment>
