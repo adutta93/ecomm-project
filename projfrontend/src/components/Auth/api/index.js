@@ -17,7 +17,7 @@ export const signUp = (user) => {
 };
 
 //signin
-export const signUp = (user) => {
+export const signIn = (user) => {
     return fetch(`${API}/login`, {
       method: "POST",
       headers: {
