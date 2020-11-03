@@ -28,7 +28,7 @@ const Navbar = () => {
       </HamburgerMenu>
       <NavMenu onClick={menuToggle} click={click}>
         <NavItem>
-          <NavLinks to="/posts">Posts</NavLinks>
+          <NavLinks to="/posts">Home</NavLinks>
         </NavItem>
 
         <NavItem>
@@ -36,15 +36,13 @@ const Navbar = () => {
         </NavItem>
 
         <NavItem>
-          <NavLinks to="https://github.com/akash-dutta-au7">GitHub</NavLinks>
-        </NavItem>
-
-        <NavItem>
           <NavLinks to="/premium">
             <Button value="Premium" transparent />
           </NavLinks>
         </NavItem>
-
+        <NavItem>
+          <NavLinks to="/cart">Cart</NavLinks>
+        </NavItem>
         <NavItem>
           <NavLinks to="/">
             <AiOutlineArrowRight /> Log Out
@@ -65,20 +63,16 @@ const Navbar = () => {
         </NavItem>
 
         <NavItem>
-          <NavLinks to="/blog">GitHub</NavLinks>
+          <NavLinks to="/sign-in">Log in</NavLinks>
         </NavItem>
-
         <NavItem>
-          <NavLinks to="/signin">Sign In</NavLinks>
+          <NavLinks to="/cart">Cart</NavLinks>
         </NavItem>
-
         <NavItem>
-          <NavLinks to="/sign-in">
-            <Button value="Log In" transparent />
+          <NavLinks to="/sign-up">
+            <Button value="Register" transparent />
           </NavLinks>
         </NavItem>
-
-        
       </NavMenu>
     </Fragment>
   );
@@ -91,6 +85,10 @@ const Navbar = () => {
           <Icon />
           Cartman
         </Logo>
+        <input
+          placeholder="Search"
+          style={{ height: "2.2rem", marginTop: "1.5rem", width: "20rem" }}
+        />
 
         <Fragment>{isAuthenticated ? authUserLink : guestUserLink}</Fragment>
       </NavbarContainer>

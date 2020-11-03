@@ -3,16 +3,16 @@ import styled from "styled-components";
 export const Btn = styled.button`
   background: ${({ bigBtn, mediumBtn, transparent, deleteBtn }) =>
     bigBtn
-      ? "#03a87c"
+      ? "#F3B63A"
       : mediumBtn
-      ? "#03a87c"
+      ? "#F3B63A"
       : transparent
       ? "#fff"
       : deleteBtn
       ? "#FF3031"
-      : "#03a87c "};
+      : "#F3B63A "};
   color: ${({ bigBtn, mediumBtn, transparent }) =>
-    bigBtn ? "#fff" : mediumBtn ? "#fff" : transparent ? "#03a87c" : "#fff "};
+    bigBtn ? "#fff" : mediumBtn ? "#fff" : transparent ? "#F3B63A" : "#fff "};
   padding: ${({ bigBtn, mediumBtn, transparent, logInBtn }) =>
     bigBtn
       ? "1.2rem 6rem"
@@ -23,7 +23,7 @@ export const Btn = styled.button`
       : transparent
       ? "0.6rem 2.3rem "
       : "0.7rem 2.5rem "};
-  border: ${({ transparent }) => (transparent ? "2px solid #03a87c" : "none ")};
+  border: ${({ transparent }) => (transparent ? "2px solid #F3B63A" : "none ")};
   outline: none;
   border-radius: 5px;
   font-size: 0.9rem;
@@ -34,7 +34,7 @@ export const Btn = styled.button`
   cursor: pointer;
   &:hover {
     color: #fff;
-    background: ${({ deleteBtn }) => (deleteBtn ? "#E44236" : "#00c792")};
+    background: ${({ deleteBtn }) => (deleteBtn ? "#E44236" : "#F3B63A")};
     
   }
   @media screen and (max-width: 768px) {

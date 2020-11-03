@@ -9,6 +9,7 @@ export const FooterContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 12rem;
 `;
 
 export const FooterSubscription = styled.div`
@@ -104,7 +105,7 @@ export const FooterLink = styled.div`
   margin-bottom: 0.8rem;
   cursor: pointer;
   &:hover {
-    color: #0467fb;
+    color: #F3B63A;
     
   }
 `;
@@ -150,7 +151,7 @@ export const SocialIconLink = styled.a`
   color: #fff;
   font-size: 1.5rem;
   &:hover {
-    color: #0467fb;
+    color: #F3B63A;
     transition: 0.3s ease-out;
   }
 `;

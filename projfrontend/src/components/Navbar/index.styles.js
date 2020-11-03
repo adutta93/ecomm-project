@@ -26,7 +26,7 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const Logo = styled(Link)`
-  color: #03a87c;
+  color: #F3B63A;
   display: flex;
   font-family: Serif;
   justify-content: center;
@@ -112,7 +112,7 @@ export const NavLinks = styled(Link)`
     display: table; 
   }
   &:hover {
-    color: #03a87c;
+    color: #F3B63A;
     
   }
 `;
