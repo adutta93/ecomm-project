@@ -7,14 +7,9 @@ const {
   updateUser,
   userPurchaseList,
 } = require("../controllers/userController");
-const {
-  isSignedIn,
-  isAuthenticated,
-  isAdmin,
-} = require("../middleware/auth");
+const { isSignedIn, isAuthenticated, isAdmin } = require("../middleware/auth");
 
 router.param("userId", getUserById);
-
 
 router.get("/user/:userId", isSignedIn, isAuthenticated, getUser);
 router.put("/user/:userId", isSignedIn, isAuthenticated, updateUser);

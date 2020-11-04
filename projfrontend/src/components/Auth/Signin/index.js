@@ -6,8 +6,8 @@ import Swal from "sweetalert2";
 
 const Signin = () => {
   const [value, setValue] = useState({
-    email: "",
-    password: "",
+    email: "akashdutta1993official@gmail.com",
+    password: "akashmaroon5",
     error: "",
     loading: false,
     didRedirect: false,
@@ -42,6 +42,7 @@ const Signin = () => {
             });
           });
           Swal.fire("Success!", "User loggedin successfully!", "success");
+          
         }
       })
       .catch((err) => console.log("From sign in page", err));
