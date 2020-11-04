@@ -42,7 +42,6 @@ const Signin = () => {
             });
           });
           Swal.fire("Success!", "User loggedin successfully!", "success");
-          
         }
       })
       .catch((err) => console.log("From sign in page", err));
@@ -60,9 +59,9 @@ const Signin = () => {
   const doRedirect = () => {
     if (didRedirect) {
       if (user && user.role === 1) {
-        return <p>Redirect to admin dashboard</p>;
+        return <Redirect to="/admin/dashboard" />;
       } else {
-        return <p>Redirect to user dashboard</p>;
+        return <Redirect to="/user/dashboard" />;
       }
     }
     if (isAuthenticated()) {

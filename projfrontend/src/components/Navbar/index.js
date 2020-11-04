@@ -35,7 +35,10 @@ const Navbar = () => {
         </NavItem>
 
         <NavItem>
-          <NavLinks to="/manageprofile">Profile</NavLinks>
+          <NavLinks to="/user/dashboard">U.Profile</NavLinks>
+        </NavItem>
+        <NavItem>
+          <NavLinks to="/admin/dashboard">A.Profile</NavLinks>
         </NavItem>
 
         <NavItem>
