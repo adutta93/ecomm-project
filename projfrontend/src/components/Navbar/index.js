@@ -1,9 +1,9 @@
-import React, { Fragment, useState, } from "react";
+import React, { Fragment, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Button from "../Button";
 import { signOut, isAuthenticated } from "../Auth/api";
-import {useHistory} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
 import {
   Nav,
@@ -23,7 +23,7 @@ const Navbar = () => {
     setClick(!click);
   };
 
-  let history = useHistory()
+  let history = useHistory();
   const authUserLink = (
     <Fragment>
       <HamburgerMenu onClick={menuToggle}>
@@ -34,12 +34,17 @@ const Navbar = () => {
           <NavLinks to="/posts">Home</NavLinks>
         </NavItem>
 
-        <NavItem>
-          <NavLinks to="/user/dashboard">U.Profile</NavLinks>
-        </NavItem>
-        <NavItem>
-          <NavLinks to="/admin/dashboard">A.Profile</NavLinks>
-        </NavItem>
+        {isAuthenticated() && isAuthenticated().user.role === 0 && (
+          <NavItem>
+            <NavLinks to="/user/dashboard">U.Profile</NavLinks>
+          </NavItem>
+        )}
+
+        {isAuthenticated() && isAuthenticated().user.role === 1 && (
+          <NavItem>
+            <NavLinks to="/admin/dashboard">A.Profile</NavLinks>
+          </NavItem>
+        )}
 
         <NavItem>
           <NavLinks to="/premium">
