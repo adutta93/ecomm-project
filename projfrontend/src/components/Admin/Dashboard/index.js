@@ -9,53 +9,47 @@ import { isAuthenticated, signOut } from "../../Auth/api";
 import { useHistory } from "react-router-dom";
 
 const AdminDashNav = () => {
-  const [sidebar, setSidebar] = useState(false);
+  const adminNav = () => {
+    return (
+      <div className="">
+        {" "}
+        <div className="link-container">
+          <Link className="links" to="/">
+            Profile
+          </Link>
+          <Link className="links" to="/">
+            Create Categories
+          </Link>
+          <Link className="links" to="/">
+            Create Products
+          </Link>
+          <Link className="links" to="/">
+            Manage Products
+          </Link>
+          <Link className="links" to="/">
+            Manage Orders
+          </Link>
+        </div>
+      </div>
+    );
+  };
 
-  const showSidebar = () => setSidebar(!sidebar);
-  let history = useHistory();
+  const dashDetails = () => {
+    return (
+      <div>
+        <h1>Hi Admin!</h1>
+      </div>
+    );
+  };
   return (
-    <>
-      {/* <div className="navbar">
-        <Link to="#" className="menu-bars">
-          <FaBars color="#fff" />
-        </Link>
-      </div> */}
-      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-        <ul className="nav-menu-items" onClick={showSidebar}>
-          <li className="navbar-toggle">
-            <Link to="#" className="menu-bars">
-              <AiIcons.AiOutlineClose color="#fff" />
-            </Link>
-          </li>
-          {SidebarData.map((item, index) => {
-            return (
-              <li key={index} className={item.cName}>
-                {item.title === "Logout" ? (
-                  <Link
-                    to="/"
-                    onClick={() => {
-                      signOut(() => {
-                        history.push("/");
-                      });
-                    }}
-                  >
-                    <FaIcons.FaEnvelopeOpenText />
-                    <span>Logout</span>
-                  </Link>
-                ) : (
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-    </>
+    <div className="container p-3">
+      <h1>Admin Dashboard</h1>
+      <div className="row ">
+        <div className="col-3">{adminNav()}</div>
+        <div className="col-9">{dashDetails()}</div>
+      </div>
+    </div>
   );
 };
 
 export default AdminDashNav;
-
