@@ -1,12 +1,11 @@
 import React, { Fragment, useState } from "react";
-import * as FaIcons from "react-icons/fa";
-import { FaBars } from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SidebarData } from "../SidebarData";
 import "./index.css";
 import { isAuthenticated, signOut } from "../../Auth/api";
 import { useHistory } from "react-router-dom";
+
+const {user:{firstName, lastName, email, mobileNumber}} = isAuthenticated()
 
 const AdminDashNav = () => {
   const adminNav = () => {
@@ -36,8 +35,10 @@ const AdminDashNav = () => {
 
   const dashDetails = () => {
     return (
-      <div>
-        <h1>Hi Admin!</h1>
+      <div className="dashdetails">
+        <h3>Name: {firstName + " " + lastName}</h3>
+        <h4>Email: {email}</h4>
+        <h4>Mobile Number: {mobileNumber}</h4>
       </div>
     );
   };
